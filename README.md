@@ -15,6 +15,10 @@
         <img src="https://circleci.com/gh/vapor/api-template.svg?style=shield" alt="Continuous Integration">
     </a>
     <a href="https://swift.org">
-        <img src="http://img.shields.io/badge/swift-4.1-brightgreen.svg" alt="Swift 4.1">
+        <img src="http://img.shields.io/badge/swift-4.2-brightgreen.svg" alt="Swift 4.2">
     </a>
 </p>
+
+## Vapor Demo
+
+Sample Project to showcase the basics of vapor
