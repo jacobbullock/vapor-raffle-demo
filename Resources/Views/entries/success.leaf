@@ -1,0 +1,13 @@
+#set("page_title") { Submitted }
+
+#set("content") {
+<br/>
+<div class="ui raised very padded text container segment">
+    <h1> Success! </h1>
+    You are entered into the raffle: #(title)
+    <br/>
+    <a href="/raffles/#(id)" target="_self">Back To Raffle</a>
+</div>
+}
+
+#embed("master")

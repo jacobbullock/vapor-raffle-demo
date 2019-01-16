@@ -1,0 +1,17 @@
+#set("page_title") { Create Raffle }
+
+#set("content") {
+<br/>
+<div class="ui raised very padded text container segment">
+    <h1> Create Raffle </h1>
+    <form action="/raffles" method="POST" class="ui form">
+        <div class="field">
+            <label>title</label>
+            <input type="text" name="title" placeholder="Title">
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
+</div>
+}
+
+#embed("master")

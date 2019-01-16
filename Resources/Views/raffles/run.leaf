@@ -1,0 +1,48 @@
+#set("page_title") { Run Raffle }
+#set("styles") {
+    <link rel="stylesheet" type="text/css" href="/styles/raffle.css">
+}
+
+#set("index") { 0 }
+#set("content") {
+<div id="raffle" data-id="#(id)"></div>
+<br/>
+<div class="ui raised very padded text container segment">
+    <h1>#(title)</h1>
+    <div class="ui grid">
+    #for(entry in entries) {
+        #if(index % 5 == 0) {
+            #if(index > 0) {
+                </div>
+            }
+            <div class="five column row" style="height:80px; text-align: center; vertical-align:middle">
+        }
+        <div class="column">
+            #set("eligibleClass") {js-entry}
+            #if(entry.drawnAt != nil) {
+                #set("eligibleClass") {winner}
+            }
+            <div id="#(eligibleClass)-#(entry.id)" data-id="#(entry.id)" class="#(eligibleClass) ui segment">
+                #(entry.firstName)
+            </div>
+        </div>
+
+        #set("index") { #(index + 1) } 
+    }
+    </div>
+    <div style="margin-top: 30px;">
+        <button class="ui button" onclick="start()" style="margin-right: 50px;">Run Raffle</button>
+        <button class="ui button" onclick="confirmClear()">Clear Winners</button>
+    </div>
+    
+</div>
+}
+
+#set("javascript") {
+    <script src="/scripts/raffle.js"></script>
+}
+
+#embed("master")
+
+
+

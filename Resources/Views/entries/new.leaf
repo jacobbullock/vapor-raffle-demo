@@ -1,0 +1,22 @@
+#set("page_title") { Enter Raffle }
+
+#set("content") {
+<br/>
+<div class="ui raised very padded text container segment">
+    <h1> Raffle Entry: #(title) </h1>
+    <form action="/entries/" method="POST" class="ui form">
+        <input type="hidden" name="raffleID" value="#(id)">
+        <div class="field">
+            <label>First Name</label>
+            <input type="text" name="firstName" placeholder="First Name">
+        </div>
+        <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="lastName" placeholder="Last Name">
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
+</div>
+}
+
+#embed("master")

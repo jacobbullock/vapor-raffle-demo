@@ -1,0 +1,20 @@
+#set("page_title") { Hello }
+
+#set("content") {
+<br/>
+<div class="ui raised very padded text container segment">
+    <h1> Raffle Entries for #(title) </h1>
+
+    <ul>
+    #for(entry in entries) {
+        <li>#(entry.firstName)</li>
+    }
+    </ul>
+    <br/>
+    <a href="/raffles/#(id)/entries/new" target="_self">Enter Raffle</a>
+</div>
+}
+
+#embed("master")
+
+
