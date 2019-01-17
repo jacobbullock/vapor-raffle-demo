@@ -9,6 +9,7 @@ import Vapor
 import FluentSQLite
 
 struct RaffleEntriesController: RouteCollection {
+
     func boot(router: Router) throws {
         let rafflesGroup = router.grouped("raffles", Raffle.parameter, "entries")
         rafflesGroup.get("new", use: newHandler)
@@ -36,4 +37,5 @@ struct RaffleEntriesController: RouteCollection {
             return try req.view().render("entries/new", raffle.context)
         }
     }
+
 }

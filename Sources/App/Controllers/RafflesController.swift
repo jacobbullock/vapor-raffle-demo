@@ -9,6 +9,7 @@ import Vapor
 import FluentSQLite
 
 struct RafflesController: RouteCollection {
+    
     func boot(router: Router) throws {
         let route = router.grouped("raffles")
         route.post(Raffle.self, use: createHandler)
