@@ -11,4 +11,3 @@ public func routes(_ router: Router) throws {
     try router.register(collection: RafflesController())
     try router.register(collection: RaffleEntriesController())
 }
-
